@@ -1,5 +1,5 @@
-<!Doctype html>
-<html lagn="ko">
+<!doctype html>
+<html lang="ko">
 <head>
   <!-- Required meta tags -->
   <meta charset="utf-8">
@@ -12,9 +12,12 @@
 </head>
 <body>
 
+<!-- 네비게이션바 프레그먼트로 설정후 리플레이스로 가져온다 ->타임리프 구문 -->
+<nav th:replace="navbar :: navbarFragment"></nav>
 <!-- 기본 템플릿 안에 삽입될 내용 Start -->
 <th:block layout:fragment="content"></th:block>
 <!-- 기본 템플릿 안에 삽입될 내용 End -->
-
+<!-- Bootstrap JS -->
+<script th:src="@{/bootstrap.min.js}"></script>
 </body>
 </html>
